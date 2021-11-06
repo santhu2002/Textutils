@@ -29,14 +29,14 @@ function App() {
       setmode("dark");
       document.body.style.backgroundColor = "black";
       showalert("Dark Mode Enabled", "success");
-      document.title = "TEXTUTILS - DARKMODE";
+      // document.title = "TEXTUTILS - DARKMODE";
 
     }
     else {
       setmode("light");
       document.body.style.backgroundColor = "white";
       showalert("Light Mode Enabled", "success");
-      document.title = "TEXTUTILS - LIGHTMODE";
+      // document.title = "TEXTUTILS - LIGHTMODE";
     }
   }
 
@@ -48,7 +48,7 @@ function App() {
       <div className="container my-3">
         <Switch>
           <Route exact path="/about">
-            <About />
+            <About mode={mode} />
           </Route>
           <Route exact path="/">
             <Textform heading="Enter Text Here To Analyse" mode={mode} showalert={showalert} />
